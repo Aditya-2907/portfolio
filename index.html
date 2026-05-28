@@ -3,680 +3,279 @@
 
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description"
-            content="Aditya — Frontend Web Developer & UI Designer. I build modern, responsive websites and digital experiences for clients worldwide. Available on Fiverr & LinkedIn." />
-        <meta name="keywords"
-            content="frontend developer, web designer, UI designer, freelancer, Aditya, portfolio, Fiverr, responsive websites" />
-        <meta name="author" content="Aditya" />
-        <title>Aditya — Frontend Developer & UI Designer</title>
-
-        <!-- Fonts: Clash Display + DM Sans for a refined, editorial feel -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap"
-            rel="stylesheet" />
-
-        <!-- Phosphor Icons -->
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya | Web Designer, Developer, Motion Creator</title>
+  <meta name="description" content="Aditya is a web designer and developer building animated, responsive websites, brand visuals, and social content for modern businesses." />
+  <meta property="og:title" content="Aditya | Web Designer, Developer, Motion Creator" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
         <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
 
-        <!-- ============================================================
-       NAVIGATION
-  ============================================================ -->
-        <header class="navbar" id="navbar">
-            <div class="nav-container">
-                <a href="#home" class="nav-logo">
-                    <span class="logo-dot"></span>
-                    Aditya
-                </a>
+       <canvas class="noise-canvas" id="fieldCanvas" aria-hidden="true"></canvas>
 
-                <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
-                    <a href="#home" class="nav-link active">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#journey" class="nav-link">Journey</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </nav>
-
-                <a href="#contact" class="btn btn-primary btn-sm nav-cta">Hire Me</a>
-
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </header>
-
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-            <nav class="mobile-nav-links">
-                <a href="#home" class="mobile-nav-link">Home</a>
-                <a href="#about" class="mobile-nav-link">About</a>
-                <a href="#skills" class="mobile-nav-link">Skills</a>
-                <a href="#services" class="mobile-nav-link">Services</a>
-                <a href="#projects" class="mobile-nav-link">Projects</a>
-                <a href="#journey" class="mobile-nav-link">Journey</a>
-                <a href="#contact" class="mobile-nav-link">Contact</a>
-            </nav>
+  <div class="site-shell">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a class="brand magnetic" href="#home" aria-label="Aditya home">
+          <span class="brand__mark">A</span>
+          <span>Aditya</span>
+        </a>
+        <div class="nav__links" aria-label="Page sections">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
         </div>
+        <div class="nav__actions">
+          <button class="theme-toggle magnetic" type="button" id="themeToggle" aria-label="Toggle theme">O</button>
+          <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
 
-        <main>
+    <div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-            <!-- ============================================================
-         HERO SECTION
-    ============================================================ -->
-            <section class="hero" id="home">
-                <div class="hero-bg-grid"></div>
-                <div class="hero-container">
-
-                    <div class="hero-content fade-up">
-                        <div class="hero-badge">
-                            <span class="badge-dot"></span>
-                            Available for freelance work
-                        </div>
-
-                        <h1 class="hero-title">
-                            Hi, I'm <span class="accent">Aditya</span>
-                        </h1>
-                        <p class="hero-subtitle">
-                            Frontend Designer<br class="br-mobile" /> & Backend Developer
-                        </p>
-                        <p class="hero-description">
-                            I craft responsive, high-performance websites and digital experiences
-                            that help businesses grow — pixel-perfect design meets clean, modern code.
-                        </p>
-
-                        <div class="hero-actions">
-                            <a href="#projects" class="btn btn-primary">
-                                <i class="ph ph-briefcase"></i> View Projects
-                            </a>
-                            <a href="#contact" class="btn btn-outline">
-                                <i class="ph ph-envelope"></i> Contact Me
-                            </a>
-                        </div>
-
-                        <div class="hero-stats">
-                            <div class="stat">
-                                <strong>30+</strong>
-                                <span>Projects Done</span>
-                            </div>
-                            <div class="stat-divider"></div>
-                            <div class="stat">
-                                <strong>15+</strong>
-                                <span>Happy Clients</span>
-                            </div>
-                            <div class="stat-divider"></div>
-                            <div class="stat">
-                                <strong>3+</strong>
-                                <span>Years Learning</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero-image-wrap fade-up delay-2">
-                        <div class="hero-image-card">
-                            <div class="profile-img-placeholder" role="img" aria-label="Aditya's profile photo">
-                                <img src="ProfilePhoto.png" alt="Aditya – Frontend Developer & UI Designer"
-                                    class="profile-photo" />
-                                <div class="profile-ring ring-1"></div>
-                                <div class="profile-ring ring-2"></div>
-                            </div>
-                            <!-- Floating badges -->
-                            <div class="float-badge badge-top">
-                                <i class="ph ph-code"></i> Frontend Designer
-                            </div>
-                            <div class="float-badge badge-bottom">
-                                <i class="ph ph-star"></i> Backend Developer
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="scroll-indicator">
-                    <span>Scroll down</span>
-                    <div class="scroll-line"></div>
-                </div>
-            </section>
-
-            <!-- ============================================================
-         ABOUT SECTION
-    ============================================================ -->
-            <section class="about section" id="about">
-                <div class="container">
-                    <div class="section-label fade-up">About Me</div>
-                    <div class="about-grid">
-
-                        <div class="about-left fade-up">
-                            <h2 class="section-title">
-                                Building the web,<br />
-                                <em>one pixel at a time.</em>
-                            </h2>
-                            <p class="about-text">
-                                I'm a passionate frontend web developer and UI designer focused on creating
-                                clean, modern, and user-friendly digital products. I believe great design
-                                is where aesthetics meet function — every website I build is crafted with
-                                attention to detail, performance, and real user experience in mind.
-                            </p>
-                            <p class="about-text">
-                                Beyond frontend, I have solid knowledge of backend basics with Node.js,
-                                Express, and databases — giving me the ability to understand full-stack
-                                projects end-to-end. I also bring creativity through graphic design,
-                                branding, and video editing, making me a well-rounded digital freelancer.
-                            </p>
-                            <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;">
-                                Let's Work Together <i class="ph ph-arrow-right"></i>
-                            </a>
-                        </div>
-
-                        <div class="about-right fade-up delay-1">
-                            <div class="about-card">
-                                <i class="ph ph-monitor about-icon"></i>
-                                <h3>Frontend Focus</h3>
-                                <p>Responsive, fast, and visually sharp interfaces with modern HTML, CSS, and
-                                    JavaScript.</p>
-                            </div>
-                            <div class="about-card">
-                                <i class="ph ph-palette about-icon"></i>
-                                <h3>Design Eye</h3>
-                                <p>Graphic design, UI/UX principles, and creative assets — Photoshop, Canva, and
-                                    Illustrator.</p>
-                            </div>
-                            <div class="about-card">
-                                <i class="ph ph-database about-icon"></i>
-                                <h3>Backend Basics</h3>
-                                <p>Node.js, Express, MongoDB, and MySQL — enough to build and understand full-stack
-                                    apps.</p>
-                            </div>
-                            <div class="about-card">
-                                <i class="ph ph-film-strip about-icon"></i>
-                                <h3>Creative Media</h3>
-                                <p>Reel editing and motion content for brands, social media, and digital campaigns.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============================================================
-         SKILLS SECTION
-    ============================================================ -->
-            <section class="skills section section-alt" id="skills">
-                <div class="container">
-                    <div class="section-label fade-up">Skillset</div>
-                    <h2 class="section-title centered fade-up">Tools & Technologies</h2>
-                    <p class="section-subtitle fade-up">A curated stack of tools I use to bring ideas to life — from
-                        pixel-perfect design to functional web apps.</p>
-
-                    <div class="skills-grid">
-
-                        <!-- Frontend -->
-                        <div class="skill-category fade-up">
-                            <div class="skill-category-header">
-                                <i class="ph ph-layout"></i>
-                                <h3>Frontend</h3>
-                            </div>
-                            <div class="skill-tags">
-                                <span class="skill-tag"><i class="ph ph-file-html"></i> HTML5</span>
-                                <span class="skill-tag"><i class="ph ph-file-css"></i> CSS3</span>
-                                <span class="skill-tag"><i class="ph ph-lightning"></i> JavaScript</span>
-                                <span class="skill-tag"><i class="ph ph-grid-four"></i> Bootstrap</span>
-                                <span class="skill-tag"><i class="ph ph-devices"></i> Responsive Design</span>
-                                <span class="skill-tag"><i class="ph ph-eye"></i> UI/UX</span>
-                            </div>
-                        </div>
-
-                        <!-- Backend -->
-                        <div class="skill-category fade-up delay-1">
-                            <div class="skill-category-header">
-                                <i class="ph ph-terminal-window"></i>
-                                <h3>Backend</h3>
-                            </div>
-                            <div class="skill-tags">
-                                <span class="skill-tag"><i class="ph ph-tree-structure"></i> Node.js</span>
-                                <span class="skill-tag"><i class="ph ph-lightning-slash"></i> Express.js</span>
-                                <span class="skill-tag"><i class="ph ph-database"></i> MongoDB</span>
-                                <span class="skill-tag"><i class="ph ph-table"></i> MySQL</span>
-                            </div>
-                        </div>
-
-                        <!-- Creative -->
-                        <div class="skill-category fade-up delay-2">
-                            <div class="skill-category-header">
-                                <i class="ph ph-magic-wand"></i>
-                                <h3>Creative</h3>
-                            </div>
-                            <div class="skill-tags">
-                                <span class="skill-tag"><i class="ph ph-image"></i> Photoshop</span>
-                                <span class="skill-tag"><i class="ph ph-shapes"></i> Canva</span>
-                                <span class="skill-tag"><i class="ph ph-pen-nib"></i> Illustrator</span>
-                                <span class="skill-tag"><i class="ph ph-video"></i> Reel Editing</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============================================================
-         SERVICES SECTION
-    ============================================================ -->
-            <section class="services section" id="services">
-                <div class="container">
-                    <div class="section-label fade-up">What I Offer</div>
-                    <h2 class="section-title centered fade-up">Services</h2>
-                    <p class="section-subtitle fade-up">End-to-end digital solutions tailored for startups, small
-                        businesses, and individuals.</p>
-
-                    <div class="services-grid">
-
-                        <div class="service-card fade-up">
-                            <div class="service-icon-wrap">
-                                <i class="ph ph-code"></i>
-                            </div>
-                            <h3>Frontend Development</h3>
-                            <p>Clean, semantic HTML/CSS/JS development with a focus on performance, accessibility, and
-                                cross-browser compatibility.</p>
-                            <div class="service-footer">
-                                <span class="service-tag">HTML · CSS · JS</span>
-                            </div>
-                        </div>
-
-                        <div class="service-card fade-up delay-1">
-                            <div class="service-icon-wrap">
-                                <i class="ph ph-devices"></i>
-                            </div>
-                            <h3>Responsive Website Design</h3>
-                            <p>Mobile-first websites that look stunning on every screen — from phones to desktops, built
-                                with Flexbox and Grid.</p>
-                            <div class="service-footer">
-                                <span class="service-tag">Mobile-first · Grid</span>
-                            </div>
-                        </div>
-
-                        <div class="service-card fade-up delay-2">
-                            <div class="service-icon-wrap">
-                                <i class="ph ph-terminal-window"></i>
-                            </div>
-                            <h3>Backend Development</h3>
-                            <p>REST API design, database integration, and server-side logic using Node.js, Express,
-                                MongoDB, and MySQL.</p>
-                            <div class="service-footer">
-                                <span class="service-tag">Node · MongoDB · MySQL</span>
-                            </div>
-                        </div>
-
-                        <div class="service-card fade-up">
-                            <div class="service-icon-wrap">
-                                <i class="ph ph-palette"></i>
-                            </div>
-                            <h3>Graphic Design</h3>
-                            <p>Brand identity, social media assets, banners, and marketing materials crafted with
-                                Photoshop, Canva, and Illustrator.</p>
-                            <div class="service-footer">
-                                <span class="service-tag">Photoshop · Canva</span>
-                            </div>
-                        </div>
-
-                        <div class="service-card fade-up delay-1">
-                            <div class="service-icon-wrap">
-                                <i class="ph ph-film-slate"></i>
-                            </div>
-                            <h3>Reel Editing</h3>
-                            <p>Engaging short-form video content for Instagram, YouTube Shorts, and other social
-                                platforms — edited for impact.</p>
-                            <div class="service-footer">
-                                <span class="service-tag">Video · Social Media</span>
-                            </div>
-                        </div>
-
-                        <div class="service-card service-card-cta fade-up delay-2">
-                            <div class="service-cta-inner">
-                                <i class="ph ph-handshake"></i>
-                                <h3>Have a project in mind?</h3>
-                                <p>Let's talk about your ideas and build something great together.</p>
-                                <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============================================================
-         PROJECTS SECTION
-    ============================================================ -->
-            <section class="projects section section-alt" id="projects">
-                <div class="container">
-                    <div class="section-label fade-up">Portfolio</div>
-                    <h2 class="section-title centered fade-up">Featured Projects</h2>
-                    <p class="section-subtitle fade-up">A selection of real work — built with care, code, and
-                        creativity.</p>
-
-                    <div class="projects-grid">
-
-                        <!-- Project 1 -->
-                        <article class="project-card fade-up">
-                            <div class="project-image" role="img" aria-label="Business Landing Page project preview">
-                                <div class="project-img-placeholder" style="--ph:#1e40af;">
-                                    <i class="ph ph-briefcase-metal"></i>
-                                </div>
-                                <div class="project-overlay">
-                                    <a href="#" class="btn btn-sm btn-white" aria-label="View live demo">Live Demo <i
-                                            class="ph ph-arrow-square-out"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-white"
-                                        aria-label="View source on GitHub">GitHub <i class="ph ph-github-logo"></i></a>
-                                </div>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">Business Landing Page</h3>
-                                <p class="project-desc">A modern, conversion-focused landing page for a B2B SaaS company
-                                    — clean layout, strong CTAs, and animated sections.</p>
-                                <div class="project-tech">
-                                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Project 2 -->
-                        <article class="project-card fade-up delay-1">
-                            <div class="project-image" role="img" aria-label="Coffee Shop Website project preview">
-                                <div class="project-img-placeholder" style="--ph:#78350f;">
-                                    <i class="ph ph-coffee"></i>
-                                </div>
-                                <div class="project-overlay">
-                                    <a href="#" class="btn btn-sm btn-white" aria-label="View live demo">Live Demo <i
-                                            class="ph ph-arrow-square-out"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-white"
-                                        aria-label="View source on GitHub">GitHub <i class="ph ph-github-logo"></i></a>
-                                </div>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">Coffee Shop Website</h3>
-                                <p class="project-desc">Warm, inviting multi-page website for a local café — menu page,
-                                    gallery, online reservation form, and Google Maps integration.</p>
-                                <div class="project-tech">
-                                    <span>HTML</span><span>CSS</span><span>Bootstrap</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Project 3 -->
-                        <article class="project-card fade-up delay-2">
-                            <div class="project-image" role="img" aria-label="Portfolio Website project preview">
-                                <div class="project-img-placeholder" style="--ph:#065f46;">
-                                    <i class="ph ph-user-circle"></i>
-                                </div>
-                                <div class="project-overlay">
-                                    <a href="#" class="btn btn-sm btn-white" aria-label="View live demo">Live Demo <i
-                                            class="ph ph-arrow-square-out"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-white"
-                                        aria-label="View source on GitHub">GitHub <i class="ph ph-github-logo"></i></a>
-                                </div>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">Portfolio Website</h3>
-                                <p class="project-desc">A minimal, professional personal portfolio with smooth scroll,
-                                    animated sections, and a fully functional contact form.</p>
-                                <div class="project-tech">
-                                    <span>HTML</span><span>CSS</span><span>JS</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Project 4 -->
-                        <article class="project-card fade-up">
-                            <div class="project-image" role="img" aria-label="Dashboard UI project preview">
-                                <div class="project-img-placeholder" style="--ph:#4c1d95;">
-                                    <i class="ph ph-chart-line-up"></i>
-                                </div>
-                                <div class="project-overlay">
-                                    <a href="#" class="btn btn-sm btn-white" aria-label="View live demo">Live Demo <i
-                                            class="ph ph-arrow-square-out"></i></a>
-                                    <a href="#" class="btn btn-sm btn-outline-white"
-                                        aria-label="View source on GitHub">GitHub <i class="ph ph-github-logo"></i></a>
-                                </div>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">Dashboard UI</h3>
-                                <p class="project-desc">A data-rich admin dashboard interface with charts, stat cards,
-                                    sidebar navigation, and responsive grid layout for analytics platforms.</p>
-                                <div class="project-tech">
-                                    <span>HTML</span><span>CSS Grid</span><span>Chart.js</span>
-                                </div>
-                            </div>
-                        </article>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============================================================
-         JOURNEY / EXPERIENCE SECTION
-    ============================================================ -->
-            <section class="journey section" id="journey">
-                <div class="container">
-                    <div class="section-label fade-up">My Story</div>
-                    <h2 class="section-title centered fade-up">The Journey</h2>
-                    <p class="section-subtitle fade-up">From curiosity to craft — a timeline of growth, learning, and
-                        building.</p>
-
-                    <div class="timeline">
-
-                        <div class="timeline-item fade-up">
-                            <div class="timeline-marker">
-                                <i class="ph ph-graduation-cap"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2021</span>
-                                <h3>Started Learning Web Dev</h3>
-                                <p>Began with HTML and CSS fundamentals. Built my first static websites and fell in love
-                                    with the creative side of coding.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item fade-up delay-1">
-                            <div class="timeline-marker">
-                                <i class="ph ph-lightning"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2022</span>
-                                <h3>Mastered JavaScript & Bootstrap</h3>
-                                <p>Deep-dived into JavaScript ES6+, DOM manipulation, and responsive layouts. Started
-                                    building interactive projects and UI components.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item fade-up delay-2">
-                            <div class="timeline-marker">
-                                <i class="ph ph-palette"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2022 – 2023</span>
-                                <h3>Expanded into Design & Backend</h3>
-                                <p>Learned Photoshop, Canva, and Illustrator for graphic work. Explored Node.js,
-                                    Express, MongoDB to understand backend fundamentals.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item fade-up">
-                            <div class="timeline-marker">
-                                <i class="ph ph-rocket-launch"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2023 – 2024</span>
-                                <h3>Started Freelancing</h3>
-                                <p>Launched on Fiverr and LinkedIn. Delivered websites, UI designs, and creative assets
-                                    to clients across different industries and countries.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item fade-up delay-1">
-                            <div class="timeline-marker active">
-                                <i class="ph ph-star"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <span class="timeline-date">2025 – Present</span>
-                                <h3>Growing & Building</h3>
-                                <p>Continuously improving skills, taking on more complex projects, and building a strong
-                                    freelance reputation with quality work and client trust.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- ============================================================
-         CONTACT SECTION
-    ============================================================ -->
-            <section class="contact section section-alt" id="contact">
-                <div class="container">
-                    <div class="section-label fade-up">Get In Touch</div>
-                    <h2 class="section-title centered fade-up">Let's Work Together</h2>
-                    <p class="section-subtitle fade-up">Have a project? Need a website? Let's make it happen. Reach out
-                        and I'll get back to you within 24 hours.</p>
-
-                    <div class="contact-grid">
-
-                        <!-- Contact Info -->
-                        <div class="contact-info fade-up">
-                            <h3>Contact Details</h3>
-
-                            <a href="mailto:pauladitya.278@gmail.com" class="contact-item">
-                                <div class="contact-icon"><i class="ph ph-envelope-simple"></i></div>
-                                <div>
-                                    <span class="contact-label">Email</span>
-                                    <span class="contact-value">pauladitya.278@gmail.com</span>
-                                </div>
-                            </a>
-
-                            <a href="https://www.fiverr.com/aditya_paul_dev" target="_blank" rel="noopener noreferrer"
-                                class="contact-item">
-                                <div class="contact-icon fiverr"><i class="ph ph-storefront"></i></div>
-                                <div>
-                                    <span class="contact-label">Fiverr</span>
-                                    <span class="contact-value">fiverr.com/aditya_paul_dev</span>
-                                </div>
-                            </a>
-
-                            <a href="https://github.com/Aditya-2907" target="_blank" rel="noopener noreferrer"
-                                class="contact-item">
-                                <div class="contact-icon github"><i class="ph ph-github-logo"></i></div>
-                                <div>
-                                    <span class="contact-label">GitHub</span>
-                                    <span class="contact-value">github.com/Aditya-2907</span>
-                                </div>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/aditya-web" target="_blank" rel="noopener noreferrer"
-                                class="contact-item">
-                                <div class="contact-icon linkedin"><i class="ph ph-linkedin-logo"></i></div>
-                                <div>
-                                    <span class="contact-label">LinkedIn</span>
-                                    <span class="contact-value">linkedin.com/in/aditya-web</span>
-                                </div>
-                            </a>
-
-                            <div class="contact-availability">
-                                <span class="avail-dot"></span>
-                                Currently available for new projects
-                            </div>
-                        </div>
-
-                        <!-- Contact Form -->
-                        <div class="contact-form-wrap fade-up delay-1">
-                            <form class="contact-form" id="contactForm" novalidate>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="name">Full Name</label>
-                                        <input type="text" id="name" name="name" placeholder="John Smith" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email Address</label>
-                                        <input type="email" id="email" name="email" placeholder="john@example.com"
-                                            required />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" id="subject" name="subject"
-                                        placeholder="Website project inquiry" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" rows="5"
-                                        placeholder="Tell me about your project..." required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-full">
-                                    Send Message <i class="ph ph-paper-plane-tilt"></i>
-                                </button>
-                                <p class="form-note" id="formNote"></p>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-top">
-                    <a href="#home" class="nav-logo footer-logo">
-                        <span class="logo-dot"></span>
-                        Aditya
-                    </a>
-                    <p class="footer-tagline">Frontend Developer · UI Designer · Creative Freelancer</p>
-                    <div class="footer-socials">
-                        <a href="https://github.com/Aditya-2907" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub profile">
-                            <i class="ph ph-github-logo"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/aditya-web" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn profile">
-                            <i class="ph ph-linkedin-logo"></i>
-                        </a>
-                        <a href="https://www.fiverr.com/aditya_paul_dev" target="_blank" rel="noopener noreferrer"
-                            aria-label="Fiverr profile">
-                            <i class="ph ph-storefront"></i>
-                        </a>
-                        <a href="mailto:pauladitya.278@gmail.com" aria-label="Send email">
-                            <i class="ph ph-envelope-simple"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; <span id="year"></span> Aditya. All rights reserved.</p>
-                    <nav class="footer-nav" aria-label="Footer navigation">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#contact">Contact</a>
-                    </nav>
-                </div>
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap hero__grid">
+          <div>
+            <div class="eyebrow reveal">Available for freelance web builds</div>
+            <h1 class="reveal">Websites with <span class="serif">pulse.</span></h1>
+            <p class="hero__copy reveal">Designer, frontend developer, backend learner, graphic designer, and reel editor from India. I turn rough ideas into sharp, responsive digital experiences with motion, clarity, and a little voltage.</p>
+            <div class="hero__actions reveal">
+              <a class="btn magnetic" href="#work">See the work <span>-&gt;</span></a>
+              <a class="btn btn--ghost magnetic" href="#contact">Start a project</a>
             </div>
-        </footer>
+          </div>
+          <aside class="portrait-card reveal" aria-label="Aditya profile visual">
+            <img src="../assets/Profile Photo.png" alt="Aditya portrait" />
+            <div class="portrait-card__label">
+              <span>Creative web designer</span>
+              <span>Code + design + motion</span>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-        <!-- Back to Top Button -->
-        <button class="back-to-top" id="backToTop" aria-label="Back to top">
-            <i class="ph ph-arrow-up"></i>
-        </button>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span><b>Responsive websites</b></span><span>Frontend design</span><span>Backend foundations</span><span>Brand visuals</span><span>Reel editing</span><span>Landing pages</span>
+          <span><b>Responsive websites</b></span><span>Frontend design</span><span>Backend foundations</span><span>Brand visuals</span><span>Reel editing</span><span>Landing pages</span>
+        </div>
+      </div>
 
+      <section id="about">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="kicker">01 / Identity</div>
+            <div>
+              <h2 class="section-title">Not just a portfolio. <em>A signal.</em></h2>
+              <p class="section-copy">The best version of this site should say what clients actually care about: you can understand their idea, make it look premium, make it work on every screen, and move fast without making it feel cheap.</p>
+            </div>
+          </div>
+          <div class="about-grid">
+            <div class="statement reveal">
+              <p><strong>I design like a brand person, build like a developer, and animate like someone who knows attention is earned.</strong> The result is clean, memorable websites that help people trust you in the first few seconds.</p>
+            </div>
+            <div class="stats">
+              <div class="stat reveal" data-symbol="+"><b data-count="24">0</b><span>Project concepts and builds</span></div>
+              <div class="stat reveal" data-symbol="*"><b data-count="5">0</b><span>Core creative services</span></div>
+              <div class="stat reveal" data-symbol="/"><b data-count="100">0</b><span>Responsive mindset</span></div>
+              <div class="stat reveal" data-symbol="."><b data-count="1">0</b><span>Person handling design to delivery</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="wrap">
+          <div class="section-head skills-head reveal">
+            <div class="kicker">02 / Skill stack</div>
+            <div>
+              <h2 class="section-title">Skills by <em>section.</em></h2>
+              <p class="section-copy">A focused stack for landing pages, portfolio sites, business websites, product pages, and content systems: frontend, JavaScript, backend, database, graphics, and reel editing.</p>
+            </div>
+          </div>
+          <div class="skills">
+            <article class="skill-card reveal" data-index="01">
+              <h3>Frontend Design</h3>
+              <p>Building polished, responsive interfaces with clean structure and expressive motion.</p>
+              <div class="skill-list">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>Responsive Design</span><span>Keyframe Animation</span>
+              </div>
+            </article>
+            <article class="skill-card reveal" data-index="02">
+              <h3>JavaScript</h3>
+              <p>Adding interaction, browser behavior, dynamic content, and smoother user flows.</p>
+              <div class="skill-list">
+                <span>ES6+</span><span>DOM Manipulation</span><span>BOM</span><span>AJAX</span>
+              </div>
+            </article>
+            <article class="skill-card reveal" data-index="03">
+              <h3>Backend</h3>
+              <p>Creating practical server-side foundations for forms, APIs, and project logic.</p>
+              <div class="skill-list">
+                <span>Node.js</span><span>Express</span><span>PHP</span><span>REST</span><span>CRUD</span>
+              </div>
+            </article>
+            <article class="skill-card reveal" data-index="04">
+              <h3>Database</h3>
+              <p>Working with relational and document databases for storing real project data.</p>
+              <div class="skill-list">
+                <span>MySQL</span><span>MongoDB</span>
+              </div>
+            </article>
+            <article class="skill-card skill-card--wide reveal" data-index="05">
+              <h3>Additional Services</h3>
+              <p>Creative support for brands that need their website, visuals, and short-form content to feel connected.</p>
+              <div class="additional-grid">
+                <div class="additional-block">
+                  <h4>Graphics Design</h4>
+                  <div class="skill-list">
+                    <span>Figma</span><span>Canva</span><span>Microsoft Designer</span>
+                  </div>
+                </div>
+                <div class="additional-block">
+                  <h4>Reels Editing</h4>
+                  <div class="skill-list">
+                    <span>CapCut</span><span>Filmora</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="kicker">03 / What I build</div>
+            <div>
+              <h2 class="section-title">Small teams need <em>big presence.</em></h2>
+              <p class="section-copy">Every service is shaped around one outcome: make your brand easier to understand, easier to trust, and easier to choose.</p>
+            </div>
+          </div>
+          <div class="services-grid">
+            <article class="service reveal">
+              <div class="service__num">01</div>
+              <h3>Website Design</h3>
+              <p>Custom visual systems for portfolios, startups, local businesses, creators, and product launches.</p>
+              <div class="service__tags"><span>UI</span><span>UX</span><span>Figma feel</span></div>
+            </article>
+            <article class="service reveal">
+              <div class="service__num">02</div>
+              <h3>Frontend Build</h3>
+              <p>Fast, animated, responsive pages with clean HTML, modern CSS, and purposeful JavaScript.</p>
+              <div class="service__tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            </article>
+            <article class="service reveal">
+              <div class="service__num">03</div>
+              <h3>Backend Setup</h3>
+              <p>Forms, data flows, dashboards, and practical backend foundations for growing projects.</p>
+              <div class="service__tags"><span>APIs</span><span>Forms</span><span>Logic</span></div>
+            </article>
+            <article class="service reveal">
+              <div class="service__num">04</div>
+              <h3>Content Identity</h3>
+              <p>Brand graphics and short-form video edits that make your page, feed, and offer feel connected.</p>
+              <div class="service__tags"><span>Brand</span><span>Reels</span><span>Motion</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="kicker">04 / Selected directions</div>
+            <div>
+              <h2 class="section-title">Work that sells the <em>feeling.</em></h2>
+              <p class="section-copy">These are portfolio directions designed to show range: premium landing pages, creator identities, business sites, and scroll-stopping content systems.</p>
+            </div>
+          </div>
+          <div class="work-grid">
+            <article class="project reveal" style="--project-bg: linear-gradient(135deg, #111, #223a2f 36%, #c7ff3f);">
+              <div class="project__top"><span>Landing page</span><span>2026</span></div>
+              <div><h3>Launch site with kinetic hero</h3><p>Premium above-the-fold storytelling, offer sections, social proof, and a high-converting contact path.</p></div>
+            </article>
+            <article class="project reveal" style="--project-bg: linear-gradient(135deg, #17110e, #8d271d 44%, #ff5f4a);">
+              <div class="project__top"><span>Restaurant</span><span>2026</span></div>
+              <div><h3>Local brand website</h3><p>Menu, booking, location, gallery, and mobile-first browsing for real customers.</p></div>
+            </article>
+            <article class="project reveal" style="--project-bg: linear-gradient(135deg, #091015, #125465 45%, #47e8ff);">
+              <div class="project__top"><span>Dashboard</span><span>2026</span></div>
+              <div><h3>Service control panel</h3><p>Readable cards, fast actions, clean data states, and responsive admin views.</p></div>
+            </article>
+            <article class="project reveal" style="--project-bg: linear-gradient(135deg, #120f1d, #4d336d 42%, #b48cff);">
+              <div class="project__top"><span>Identity</span><span>2026</span></div>
+              <div><h3>Creator visual system</h3><p>Logo direction, type, color, post templates, and animated reel packaging.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div class="kicker">05 / Process</div>
+            <div>
+              <h2 class="section-title">Clear steps. <em>Wild finish.</em></h2>
+              <p class="section-copy">A simple workflow keeps the project calm while the result gets expressive.</p>
+            </div>
+          </div>
+          <ol class="process">
+            <li class="reveal"><h3>Decode</h3><p>Understand the audience, offer, references, and business goal.</p></li>
+            <li class="reveal"><h3>Shape</h3><p>Create the layout, content hierarchy, motion language, and responsive system.</p></li>
+            <li class="reveal"><h3>Build</h3><p>Turn the design into fast front-end code with interactive details.</p></li>
+            <li class="reveal"><h3>Refine</h3><p>Polish the mobile view, copy, performance, and final handoff.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="wrap contact-grid">
+          <div class="contact-panel reveal">
+            <div class="kicker">06 / Contact</div>
+            <h2>Ready to make it <em>real?</em></h2>
+            <p>Send the idea, the deadline, and the result you want. I will help shape it into a website or creative package that feels intentional from the first scroll.</p>
+            <div class="contact-actions">
+              <a class="btn magnetic" href="mailto:aditya@email.com">Email me</a>
+              <a class="btn btn--ghost magnetic" href="#home">Back to top</a>
+            </div>
+          </div>
+          <div class="contact-links reveal">
+            <a href="mailto:aditya@email.com"><span><small>Email</small>aditya@email.com</span><strong>-&gt;</strong></a>
+            <a href="https://github.com/aditya-2907" target="_blank" rel="noopener"><span><small>GitHub</small>github.com/aditya-2907</span><strong>-&gt;</strong></a>
+            <a href="https://linkedin.com/in/aditya" target="_blank" rel="noopener"><span><small>LinkedIn</small>linkedin.com/in/aditya</span><strong>-&gt;</strong></a>
+            <a href="https://fiverr.com/aditya" target="_blank" rel="noopener"><span><small>Fiverr</small>fiverr.com/aditya</span><strong>-&gt;</strong></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>Aditya - creative web designer and developer</span>
+        <span>Built in India / 2026</span>
+      </div>
+    </footer>
+  </div>
         <script src="main.js"></script>
     </body>
 
