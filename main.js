@@ -1,4 +1,4 @@
-const root = document.documentElement;
+    const root = document.documentElement;
     const themeToggle = document.getElementById("themeToggle");
     const savedTheme = localStorage.getItem("aditya-theme");
     if (savedTheme) root.dataset.theme = savedTheme;
