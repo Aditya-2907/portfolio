@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aditya Paul — Full Stack Web Developer</title>
+        <meta name="description"
+            content="Aditya Paul — Full Stack Web Developer based in Kolkata, India. Node.js, Express, MongoDB, MySQL, and modern frontend.">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon"
+            href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230B1220'/%3E%3Ctext x='50' y='68' font-size='58' font-family='monospace' fill='%23FFB454' text-anchor='middle'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="grid-overlay" aria-hidden="true">
+            <span class="crop tl"></span><span class="crop tr"></span>
+            <span class="crop bl"></span><span class="crop br"></span>
+        </div>
+
+        <header class="nav">
+            <div class="nav-inner">
+                <a href="#top" class="logo">aditya<span class="accent">.</span>paul</a>
+                <nav class="nav-links" id="navLinks">
+                    <a href="#about">§01 About</a>
+                    <a href="#stack">§02 Stack</a>
+                    <a href="#work">§03 Work</a>
+                    <a href="#experience">§04 Timeline</a>
+                    <a href="#contact">§05 Contact</a>
+                </nav>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme"><span
+                            class="knob"></span></button>
+                    <button class="nav-burger" id="navBurger"
+                        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <section id="top" class="hero">
+                <div class="hero-inner">
+                    <div class="hero-copy">
+                        <p class="eyebrow">§00 — Profile / Kolkata, West Bengal, India</p>
+                        <h1>Full&#8209;Stack Web<br>Developer.</h1>
+                        <p class="hero-lede">I build fast, clean, user-first web applications end to end — comfortable
+                            owning the interface as much as the server and data layer underneath it.</p>
+                        <div class="hero-actions">
+                            <a href="#work" class="btn btn-primary">View Work</a>
+                            <a href="./Aditya Paul Resume.pdf" download class="btn btn-outline">Download Résumé</a>
+                        </div>
+                    </div>
+                    <div class="hero-panel" role="img" aria-label="Mock API response describing Aditya Paul's profile">
+                        <div class="panel-titlebar">
+                            <span></span><span></span><span></span>
+                            <p>GET /api/profile</p>
+                        </div>
+                        <pre
+                            class="panel-body"><code id="apiTyped"></code><span class="cursor" aria-hidden="true"></span></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section reveal">
+                <div class="section-inner">
+                    <p class="section-label">§01 — About</p>
+                    <h2>Profile notes</h2>
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p>I'm a final-year BCA student at Manipal University Jaipur, working toward a full-stack
+                                developer role. Alongside my studies, I teach HTML, CSS, JavaScript, Bootstrap, MySQL,
+                                C, and Python as part-time faculty at Technosoft Academy — a role that has sharpened
+                                both my technical depth and my ability to explain complex ideas simply.</p>
+                            <p>Before that, I spent a year and a half as a Back Office Executive, which built the kind
+                                of discipline and attention to detail I now bring to writing code. I'm self-taught in
+                                the MERN stack fundamentals and am actively building out my backend skills in Node.js,
+                                Express.js, and MongoDB alongside the MySQL I already use day to day.</p>
+                        </div>
+                        <ul class="fact-chips">
+                            <li><span>2023 – 2026</span>BCA, Manipal University Jaipur</li>
+                            <li><span>Oct 2024 – Present</span>Part-Time Faculty, Technosoft Academy</li>
+                            <li><span>1.5 years</span>Back Office Executive, Shashank Skills Academy</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stack" class="section reveal">
+                <div class="section-inner">
+                    <p class="section-label">§02 — Stack Schema</p>
+                    <h2>What I build with</h2>
+                    <div class="schema-grid">
+
+                        <div class="schema-table">
+                            <div class="schema-head">frontend_stack</div>
+                            <div class="schema-row"><span>HTML5 &amp; CSS3</span><span class="tag core">core</span>
+                            </div>
+                            <div class="schema-row"><span>Bootstrap</span><span class="tag core">core</span></div>
+                            <div class="schema-row"><span>JavaScript (ES6+)</span><span class="tag core">core</span>
+                            </div>
+                            <div class="schema-row"><span>DOM Manipulation</span><span class="tag core">core</span>
+                            </div>
+                            <div class="schema-row"><span>Async / Await, Fetch API</span><span
+                                    class="tag core">core</span></div>
+                            <div class="schema-row"><span>Responsive Design</span><span class="tag core">core</span>
+                            </div>
+                        </div>
+
+                        <div class="schema-table">
+                            <div class="schema-head">backend_stack</div>
+                            <div class="schema-row"><span>Node.js</span><span class="tag current">learning</span></div>
+                            <div class="schema-row"><span>Express.js</span><span class="tag current">learning</span>
+                            </div>
+                            <div class="schema-row"><span>MongoDB</span><span class="tag current">learning</span></div>
+                            <div class="schema-row"><span>MySQL</span><span class="tag core">core</span></div>
+                            <div class="schema-row"><span>REST APIs</span><span class="tag core">core</span></div>
+                            <div class="schema-row"><span>CRUD Operations</span><span class="tag core">core</span></div>
+                        </div>
+
+                        <div class="schema-table">
+                            <div class="schema-head">tools</div>
+                            <div class="schema-row"><span>Git</span><span class="tag core">core</span></div>
+                            <div class="schema-row"><span>GitHub</span><span class="tag core">core</span></div>
+                            <div class="schema-row"><span>VS Code</span><span class="tag core">core</span></div>
+                        </div>
+
+                        <div class="schema-table">
+                            <div class="schema-head">other_skills</div>
+                            <div class="schema-row"><span>Technical Teaching</span><span class="tag core">core</span>
+                            </div>
+                            <div class="schema-row"><span>Problem Solving</span><span class="tag core">core</span></div>
+                            <div class="schema-row"><span>Freelance Collaboration</span><span
+                                    class="tag current">active</span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="work" class="section reveal">
+                <div class="section-inner">
+                    <p class="section-label">§03 — Case Files</p>
+                    <h2>Selected work</h2>
+                    <div class="cards-grid">
+
+                        <div class="case-card">
+                            <div class="case-top">
+                                <h3>Currency Converter</h3><span class="status live">LIVE</span>
+                            </div>
+                            <p class="case-field"><b>Problem —</b> Manual exchange-rate lookups are slow and error-prone
+                                for quick conversions.</p>
+                            <p class="case-field"><b>Build —</b> A single-page tool that calls the ExchangeRate API
+                                asynchronously and converts between currencies in real time.</p>
+                            <div class="case-stack"><span>JavaScript</span><span>ExchangeRate
+                                    API</span><span>Fetch</span></div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-top">
+                                <h3>Music Player</h3><span class="status live">LIVE</span>
+                            </div>
+                            <p class="case-field"><b>Problem —</b> Wanted a lightweight in-browser player without any
+                                external framework.</p>
+                            <p class="case-field"><b>Build —</b> Uses the JavaScript Audio API for play/pause, shuffle,
+                                repeat, and seek, with a custom-built control bar.</p>
+                            <div class="case-stack"><span>JavaScript</span><span>Audio API</span></div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-top">
+                                <h3>To-Do List App</h3><span class="status live">LIVE</span>
+                            </div>
+                            <p class="case-field"><b>Problem —</b> Needed a task list that actually persists between
+                                sessions.</p>
+                            <p class="case-field"><b>Build —</b> Full CRUD task management with state saved to
+                                localStorage, so nothing is lost on refresh.</p>
+                            <div class="case-stack"><span>JavaScript</span><span>localStorage</span><span>CRUD</span>
+                            </div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-top">
+                                <h3>Interactive Quiz App</h3><span class="status live">LIVE</span>
+                            </div>
+                            <p class="case-field"><b>Problem —</b> Static quizzes don't give useful feedback as you go.
+                            </p>
+                            <p class="case-field"><b>Build —</b> Dynamic question rendering with input validation and
+                                live score tracking through to a final result screen.</p>
+                            <div class="case-stack"><span>JavaScript</span><span>DOM</span><span>Validation</span></div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-top">
+                                <h3>Backend API Project</h3><span class="status progress">IN PROGRESS</span>
+                            </div>
+                            <p class="case-field"><b>Problem —</b> Moving beyond frontend-only projects into a full REST
+                                service I design and host myself.</p>
+                            <p class="case-field"><b>Build —</b> A Node.js and Express API backed by MongoDB, covering
+                                auth, CRUD routes, and proper error handling.</p>
+                            <div class="case-stack"><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="section reveal">
+                <div class="section-inner">
+                    <p class="section-label">§04 — Timeline</p>
+                    <h2>Experience &amp; education</h2>
+
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <p class="tl-date">Oct 2024 — Present</p>
+                            <p class="tl-role">Part-Time Faculty</p>
+                            <p class="tl-org">Technosoft Academy, Kolkata</p>
+                            <p class="tl-desc">Teaching HTML, CSS, JavaScript, Bootstrap, MySQL, C, and Python — turning
+                                fundamentals into things students can actually build with.</p>
+                        </div>
+                        <div class="tl-item">
+                            <p class="tl-date">Oct 2023 — Sept 2024</p>
+                            <p class="tl-role">Back Office Executive</p>
+                            <p class="tl-org">Shashank Skills Academy, Kolkata</p>
+                            <p class="tl-desc">Handled operational and administrative work that built discipline and
+                                close attention to detail — habits that now carry into how I write and ship code.</p>
+                        </div>
+                    </div>
+
+                    <div class="edu-block">
+                        <h3>Education</h3>
+                        <div class="edu-row"><span>BCA</span><span>Manipal University, Jaipur — 2023 – 2026</span></div>
+                        <div class="edu-row"><span>Higher Secondary</span><span>Krishnapur Adarsha Vidyamandir — 2022 –
+                                2023</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section reveal">
+                <div class="section-inner">
+                    <p class="section-label">§05 — Contact</p>
+                    <div class="contact-grid">
+                        <div class="contact-main">
+                            <h2>Let's build something.</h2>
+                            <p>Open to full-stack roles, internships, and freelance backend work. The fastest way to
+                                reach me is email — I read every message.</p>
+                            <a href="mailto:pauladitya2907@gmail.com" class="mail-link">pauladitya2907@gmail.com</a>
+                        </div>
+                        <div class="endpoints">
+                            <a href="tel:+917980492284" class="endpoint">
+                                <span class="verb">CALL</span><span class="path">(+91) 79804 92284</span>
+                            </a>
+                            <a href="https://linkedin.com/in/aditya-web" target="_blank" rel="noopener"
+                                class="endpoint">
+                                <span class="verb">GET</span><span class="path">linkedin.com/in/aditya-web</span>
+                            </a>
+                            <a href="https://github.com/Aditya-2907" target="_blank" rel="noopener" class="endpoint">
+                                <span class="verb">GET</span><span class="path">github.com/Aditya-2907</span>
+                            </a>
+                            <a href="./Aditya Paul Resume.pdf" download class="endpoint">
+                                <span class="verb">FILE</span><span class="path">Download résumé (PDF)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Designed &amp; built by Aditya Paul — Kolkata, India &middot; <a href="#top">back to top ↑</a></p>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
